@@ -214,8 +214,7 @@
   .section.wish p {
     font-family: 'Playfair Display', serif; font-style: italic;
     font-size: 1.05rem; line-height: 1.8;
-    background: linear-gradient(135deg, var(--g1), var(--g2));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    color: var(--g2);
   }
 
   .divider {
@@ -311,11 +310,6 @@
           <p id="cardDesc"></p>
         </div>
         <div class="divider"></div>
-        <div class="section">
-          <div class="section-label">✦ Kỷ niệm đáng nhớ</div>
-          <p id="cardMemory"></p>
-        </div>
-        <div class="divider"></div>
         <div class="section wish">
           <div class="section-label">✦ Lời chúc 8/3</div>
           <p id="cardWish"></p>
@@ -340,33 +334,28 @@
 const DATA = [
   {
     name: "Quỳnh Như",
-    description: "Quỳnh Như là cô gái luôn mang năng lượng tích cực và nụ cười rạng rỡ đến mọi người xung quanh. Dù hoàn cảnh có khó khăn đến đâu, nụ cười của bạn vẫn là ánh sáng sưởi ấm cả nhóm.",
-    memory: "Điều mọi người nhớ mãi về bạn là những tràng cười giòn tan không ngớt trong những buổi học căng thẳng nhất — chính bạn đã biến áp lực thành tiếng cười.",
-    wish_83: "Nhân ngày 8/3, chúc Quỳnh Như luôn giữ được nụ cười tươi tắn ấy, xinh đẹp rạng rỡ mỗi ngày và chạm đến mọi ước mơ mình đặt ra 💐🌸"
+    description: "Quỳnh Như là cô gái ấm áp, đáng yêu và cực kỳ tốt bụng. Bạn luôn mang đến nguồn năng lượng tích cực cho mọi người bằng nụ cười rạng rỡ và sự quan tâm chân thành. Ở bạn có sự vô tư nhưng không hề hời hợt, mà là sự trong trẻo khiến ai cũng dễ mở lòng.",
+    wish_83: "Chúc Quỳnh Như luôn giữ mãi nụ cười tươi và trái tim ấm áp ấy. Mong bạn sẽ chạm đến mọi ước mơ mình theo đuổi và luôn được yêu thương thật nhiều 🌼✨"
   },
   {
     name: "Lưu Hương",
-    description: "Lưu Hương là người bạn ân cần, chu đáo đến từng chi tiết nhỏ. Bạn luôn để ý và quan tâm đến mọi người xung quanh một cách tự nhiên, chẳng cần ai nhắc.",
-    memory: "Mọi người ấn tượng nhất khi bạn tự tay chuẩn bị những bữa ăn nhỏ cho cả nhóm những lúc ôn thi khuya — cử chỉ bình dị mà ấm lòng đến lạ.",
-    wish_83: "Chúc Lưu Hương ngày 8/3 tràn đầy niềm vui, được yêu thương và trân trọng đúng mức như cách bạn đã dành cho mọi người 🌹✨"
+    description: "Lưu Hương là cô gái rất xinh đẹp và vô cùng năng động. Bạn mang trong mình sự kết hợp thú vị giữa nét nữ tính dịu dàng và tinh thần “sporty girl” đầy nhiệt huyết. Ở bạn luôn có nguồn năng lượng tích cực khiến mọi người cảm thấy phấn chấn hơn.",
+    wish_83: "Chúc Lưu Hương luôn xinh, giữ được sự đáng yêu và tinh thần tràn đầy sức sống ấy. Mong bạn thật nhiều sức khỏe, niềm vui và đạt được những thành tích đáng tự hào trên mọi hành trình phía trước 🌷🏅✨"
   },
   {
     name: "Diệu Linh",
-    description: "Diệu Linh là sự kết hợp hoàn hảo giữa trí tuệ sắc bén và trái tim nhân hậu. Bạn học giỏi nhưng không bao giờ để ai cảm thấy tụt lại phía sau.",
-    memory: "Không ai quên những buổi chiều bạn ngồi giải thích đi giải thích lại cùng một bài toán cho đến khi cả nhóm hiểu — kiên nhẫn và tận tâm vô cùng.",
-    wish_83: "Ngày 8/3, chúc Diệu Linh luôn tỏa sáng theo cách riêng của mình, gặt hái nhiều thành công và được sống trong hạnh phúc xứng đáng 💫🌺"
+    description: "Diệu Linh mang một khí chất ngọt ngào và khiêm tốn rất riêng. Ở bạn có sự trưởng thành, điềm tĩnh và bao dung khiến mọi người cảm thấy an tâm. Bạn không thích phô trương, nhưng lại luôn âm thầm quan tâm, để ý đến cảm xúc của từng người xung quanh và khiến không khí sôi nổi hơn bằng link đăng ký trà sữa.",
+    wish_83: "Chúc Diệu Linh luôn giữ được trái tim ấm áp và sự bản lĩnh của mình. Mong bạn mỗi ngày đều tràn đầy niềm vui, hạnh phúc và thành công trên con đường mình chọn 🌸💖"
   },
   {
     name: "Kiều Linh",
-    description: "Kiều Linh là cô gái có phong cách sống ngăn nắp, gọn gàng nhưng lại sở hữu tâm hồn phóng khoáng và đầy màu sắc. Bạn biết cân bằng giữa nghiêm túc và vui vẻ rất khéo.",
-    memory: "Mọi người hay nhớ đến bạn trong những chuyến đi chơi — luôn chuẩn bị kỹ nhất, nhưng cũng là người vui nhất và tạo ra nhiều khoảnh khắc đáng nhớ nhất.",
-    wish_83: "Chúc Kiều Linh 8/3 thật ngọt ngào, tiếp tục là phiên bản tuyệt vời nhất của chính mình và nhận được thật nhiều yêu thương 🌷💕"
+    description: "Kiều Linh là cô gái có chút rụt rè nhẹ nhàng nhưng lại vô cùng đáng yêu. Bạn không quá ồn ào hay nổi bật theo cách thông thường, nhưng chính sự nhẹ nhàng ấy lại khiến người khác cảm thấy dễ chịu khi ở cạnh. Ở bạn có sự cá tính, yêu đời và một trái tim ấm áp",
+    wish_83: "Nhân ngày 8/3, chúc Kiều Linh luôn giữ được sự dịu dàng và bình yên trong tâm hồn. Mong bạn ngày càng tự tin thể hiện bản thân, gặp nhiều may mắn và luôn được yêu thương theo cách trọn vẹn nhất 🌷✨"
   },
   {
     name: "Anh Thơ",
-    description: "Anh Thơ sở hữu giọng nói ấm áp và khả năng lắng nghe tuyệt vời. Bạn là người mà ai cũng muốn tâm sự mỗi khi buồn vì bạn hiểu và không phán xét.",
-    memory: "Khoảnh khắc đáng nhớ nhất là buổi tối bạn ở lại trò chuyện đến tận khuya với người bạn đang gặp khó khăn — không cần ai yêu cầu, bạn chỉ ở đó vì muốn giúp.",
-    wish_83: "Nhân ngày 8/3, chúc Anh Thơ luôn vui khỏe, cuộc đời bình an và những điều tốt đẹp nhất sẽ tìm đến bạn như cách bạn đã dành cho người khác 🌸💖"
+    description: "Anh Thơ là cô gái lanh lợi, thông minh và mang phong thái “cool ngầu” rất riêng. Bạn có sự tự tin tự nhiên, vừa mạnh mẽ lại vừa duyên dáng. Nét cá tính ấy khiến bạn nổi bật giữa đám đông mà không cần phải cố gắng “tạo nét”",
+    wish_83: "Chúc Anh Thư luôn tự tin, tỏa sáng và giữ được màu sắc riêng của mình. Mong bạn ngày càng thành công, xinh đẹp và đạt được nhiều điều rực rỡ trong tương lai 🌟💫"
   }
 ];
 
@@ -422,7 +411,6 @@ function showCard() {
   const person = DATA.find(p => p.name === selectedName);
   document.getElementById('cardName').textContent   = person.name;
   document.getElementById('cardDesc').textContent   = person.description;
-  document.getElementById('cardMemory').textContent = person.memory;
   document.getElementById('cardWish').textContent   = person.wish_83;
   document.getElementById('screen-select').style.display = 'none';
   document.getElementById('screen-card').style.display   = 'flex';
